@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'slack-api', '~> 1.5.0'
+gem 'slack-api', '~> 1.5.0', require: false
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
