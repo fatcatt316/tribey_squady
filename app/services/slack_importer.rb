@@ -3,7 +3,7 @@ require 'slack'
 module SlackImporter
   extend self
 
-  def import_people
+  def update_people
     client.users_list['members'].each do |member|
       next if skippable?(member)
 
