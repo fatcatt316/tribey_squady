@@ -20,6 +20,7 @@ gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application fast
 # gem 'redis', '~> 3.0'
 
 gem 'figaro', '~> 1.1.1'
+gem 'octokit', '~> 4.7.0', require: false
 gem 'slack-api', '~> 1.5.0', require: false
 
 # Use Capistrano for deployment
