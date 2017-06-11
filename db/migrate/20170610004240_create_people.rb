@@ -5,6 +5,7 @@ class CreatePeople < ActiveRecord::Migration[5.0]
       t.string :last_name
       t.string :slack_name
       t.string :email
+      t.boolean :active
 
       t.timestamps
     end
