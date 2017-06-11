@@ -3,8 +3,6 @@ require 'slack'
 module SlackImporter
   extend self
 
-  TOKEN = ENV['SLACK_TOKEN']
-
   def import_people
     client.users_list['members'].each do |member|
       next if skippable?(member)
@@ -20,7 +18,7 @@ module SlackImporter
   end
 
   private def client
-    @_client ||= Slack::Client.new(token: TOKEN)
+    @_client ||= Slack::Client.new(token: ENV['SLACK_TOKEN'])
   end
 
   private def skippable?(member)
