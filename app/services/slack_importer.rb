@@ -3,7 +3,7 @@ require 'slack'
 module SlackImporter
   extend self
 
-  TOKEN = ENV['SLACK_TOKEN'] || 'xoxp-2153520021-4104948505-33181737139-3fdb71d4b9'
+  TOKEN = ENV['SLACK_TOKEN']
 
   def import_people
     client.users_list['members'].each do |member|
