@@ -1,9 +1,17 @@
-namespace :people do
+namespace :people_updater do
   desc 'Update people via Slack'
-  task update_via_slack: :environment do
+  task slack: :environment do
     time_task do
       print 'Updating people via Slack... '
       SlackImporter.update_people
+    end
+  end
+
+  desc 'Update people via Github'
+  task github: :environment do
+    time_task do
+      print 'Updating people via Github... '
+      GithubImporter.update_people
     end
   end
 
